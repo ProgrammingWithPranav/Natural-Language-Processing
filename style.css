@@ -1,0 +1,14 @@
+.round_img{
+    border-radius: 100px;
+    width: 150px;
+}
+
+#voice-input {
+    width: 300px;
+}
+
+#camera {
+    height: 250px;
+    width: 360px;
+    border: 1px solid gray;
+}
