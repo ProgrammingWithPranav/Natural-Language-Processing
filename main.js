@@ -36,4 +36,24 @@ function speak() {
 
     var speakThis = new SpeechSynthesisUtterance(speakData);
     Synth.speak(speakThis);
+
+    
+    setTimeout(function() {
+        takeSnapshot();
+    }, 5000);
+}
+
+function takeSnapshot() {
+    Webcam.snap(function(uri) {
+        document.getElementById('result').innerHTML = "<img id='selfie' src="+uri+" />";
+    });
+
+    save();
+}
+
+function save(){
+    var img_src = document.getElementById('selfie').src;
+
+    document.getElementById("myAnchor").href = img_src;
+    document.getElementById("myAnchor").click();
 }
